@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ESNext"],
+    "types": ["node", "jest"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@test/*": [
+        "test/*"
+      ]
+    }
+
+  },
+  "keywords": [],
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "bin/**/*.ts",
+    "jest.config.js"
+  ],
+  "exclude": ["node_modules/**/*", "build/**/*", ".idea/**/*"],
+  "ts-node": {
+    "transpileOnly": true,
+    "swc": true
+  }
+}
