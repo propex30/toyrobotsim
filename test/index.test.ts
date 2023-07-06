@@ -12,9 +12,10 @@ describe('test the robot query responses', () => {
 	});
 
 	it('should set a starting place for the robot in south west corner', () => {
-		const testArgs  = 'PLACE 2,3,NORTH';
-		const result = processQuery(calc, testArgs);
-		expect(result).toBe('');
+		const result = calc.placeRobotAtStart(0,0);
+		expect(typeof result).toBe('object');
+		expect(result.x).toBe(0);
+		expect(result.y).toBe(0);
 	});
 
 	it('should handle Multiple PLACE Commands and REPORT position', () => {
@@ -29,7 +30,7 @@ describe('test the robot query responses', () => {
 
 		const testArgs1  = 'N N W N';
 		const result4 = processQuery(calc, testArgs1);
-		expect(result4).toBe('ROBOT went off Board on command 3 (W) of N N W';
+		expect(result4).toBe('ROBOT went off Board on command 3 (W) of N N W');
 
 	});
 

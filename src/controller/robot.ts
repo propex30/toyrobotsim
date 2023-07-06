@@ -5,23 +5,26 @@ export enum Direction {
 	W = 'W'
 }
 
+export type robotCoords = {
+	x: number,
+	y: number
+}
+
 export class BoardRobot {
 	x: number;
 	y: number;
-	direction: Direction;
 
 	private readonly MAX_BOARD_INDEX = 4;
 	private readonly MIN_BOARD_INDEX = 0;
 
-	constructor(x: number, y: number, direction: Direction) {
+	constructor(x: number, y: number) {
 		this.x = x;
 		this.y = y;
-		this.direction = direction;
 	}
 
 	// We only allow movement in the direction specified if our current location is not already on the edge of the board, last row or column for that coordinate (min or max board index)
-	moveRobot(): void {
-		switch(this.direction){
+	moveRobot(direction: string): robotCoords {
+		switch(direction){
 		case Direction.N:
 			if(this.y < this.MAX_BOARD_INDEX){
 				this.y++;
@@ -43,5 +46,6 @@ export class BoardRobot {
 			}
 			break;
 		}
+		return {x: this.x, y: this.y};
 	}
 }

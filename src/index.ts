@@ -8,6 +8,10 @@ const rl = readline.createInterface({
 	output: process.stdout
 });
 
+const startGridX = 0;
+const startGridY = 0;
+
+
 const calc: CalculateMoves = new CalculateMoves();
 
 
@@ -24,5 +28,5 @@ export function cliAskQuestion() {
 		}
 	});
 }
-
+calc.placeRobotAtStart(startGridX,startGridY)
 cliAskQuestion(); // initial call
