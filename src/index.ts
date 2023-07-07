@@ -17,8 +17,7 @@ const calc: CalculateMoves = new CalculateMoves();
 
 export function cliAskQuestion(test: boolean) {
 	if(test){
-		console.log(calc)
-		return;
+		return calc;
 	}
 	rl.question('Robot Controller: Please enter Your move: ', (answer) => {
 		if(answer.toLowerCase() === 'exit'){
