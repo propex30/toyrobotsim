@@ -25,7 +25,6 @@ export class CalculateMoves {
 
 	}
 
-
 	setRobotGridSize(gridSize: number): BoardRobot | string {
 		if (!this.robot) {
 			return 'Error: Robot is not set up yet';

@@ -11,7 +11,7 @@
   },
   "license": "BSD-3-Clause",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "ts-node --project tsconfig.json src/index.ts",
     "build": "npm run lint && tsc",
     "lint": "eslint --ext .ts --fix src/**/*.ts test/**/*.ts",
     "postversion": "git push && git push --tags",
@@ -26,6 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "eslint": "^8.35.0",
+    "prettier": "^3.0.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.1"
   },

@@ -1,5 +1,6 @@
 import * as readline from 'readline';
-import {processQuery} from './controller/processQuery';
+import { processQuery } from './controller/processQuery';
+
 import {CalculateMoves} from './controller/calculateMoves';
 
 const rl = readline.createInterface({
@@ -7,9 +8,9 @@ const rl = readline.createInterface({
 	output: process.stdout
 });
 
+//default starting grid position
 const startGridX = 0;
 const startGridY = 0;
-
 
 const calc: CalculateMoves = new CalculateMoves();
 

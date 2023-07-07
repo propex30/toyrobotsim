@@ -1,14 +1,4 @@
-export enum Direction {
-	N = 'N',
-	E = 'E',
-	S = 'S',
-	W = 'W'
-}
-
-export type RobotCoords = {
-	x: number,
-	y: number
-}
+import {BOARD_EDGE_INDICATOR, Direction, INVALID_MOVE_INDICATOR, RobotCoords} from '../types/types'
 
 export class BoardRobot {
 	x: number;
@@ -29,32 +19,32 @@ export class BoardRobot {
 			if (this.y < this.MAX_BOARD_INDEX) {
 				this.y++;
 			} else {
-				return 1; // Board edge indicator
+				return BOARD_EDGE_INDICATOR;
 			}
 			break;
 		case Direction.E:
 			if (this.x < this.MAX_BOARD_INDEX) {
 				this.x++;
 			} else {
-				return 1; // Board edge indicator
+				return BOARD_EDGE_INDICATOR;
 			}
 			break;
 		case Direction.S:
 			if (this.y > this.MIN_BOARD_INDEX) {
 				this.y--;
 			} else {
-				return 1; // Board edge indicator
+				return BOARD_EDGE_INDICATOR;
 			}
 			break;
 		case Direction.W:
 			if (this.x > this.MIN_BOARD_INDEX) {
 				this.x--;
 			} else {
-				return 1; // Board edge indicator
+				return BOARD_EDGE_INDICATOR;
 			}
 			break;
 		default:
-			return 2; // Not a valid move indicator
+			return INVALID_MOVE_INDICATOR;
 		}
 
 		return { x: this.x, y: this.y };
