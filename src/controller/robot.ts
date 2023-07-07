@@ -14,8 +14,8 @@ export class BoardRobot {
 	x: number;
 	y: number;
 
-	private readonly MAX_BOARD_INDEX = 4;
-	private readonly MIN_BOARD_INDEX = 0;
+	public  MAX_BOARD_INDEX = 9;
+	public  MIN_BOARD_INDEX = 0;
 
 	constructor(x: number, y: number) {
 		this.x = x;

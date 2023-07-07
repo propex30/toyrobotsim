@@ -22,7 +22,17 @@ export class CalculateMoves {
 		}
 	}
 
-	placeRobotAtStart(x: number, y: number){
+	setRobotGridSize(gridSize: number):BoardRobot | string {
+		console.log(this.robot)
+		if(this.robot){
+			this.robot.MAX_BOARD_INDEX = gridSize - 1;
+		}else{
+			return 'Error: Robot is not set up yet'
+		}
+		return this.robot
+	}
+
+	placeRobotAtCoords(x: number, y: number){
 		return this.robot = new BoardRobot(x,y);
 	}
 }

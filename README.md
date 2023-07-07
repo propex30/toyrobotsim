@@ -27,6 +27,8 @@ The approach to problem-solving in this project involved breaking down the large
 ## Tradeoffs
 
 I decided to use recursion for user input to keep the CLI running and accepting commands. However, if the application was to be scaled or handling an immense amount of commands, this approach may lead to a stack overflow. An iterative approach would be better for handling larger scale applications.
+Each robot has a grid assigned which does mean we have to set up the robot before the grid which feels, give more time i'm be tempted to break this off into its own class.
+
 
 ## Function Descriptions
 
@@ -38,7 +40,7 @@ I decided to use recursion for user input to keep the CLI running and accepting 
    This function takes an instance of `CalculateMoves` and a string as arguments. It calls the `processMove` method on the `CalculateMoves` instance with the string argument, essentially processing the string as a command for the robot.
 
 
-3. **`processMove(args: string)` (in CalculateMoves class in calculateMoves.ts):**
+3. **`processMove(args: string)` (in CalculateMoves class in processQuery,test.ts):**
    needs updating
 
 4. **`moveRobot()` (in BoardRobot class in robot.ts):**
