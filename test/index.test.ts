@@ -11,8 +11,8 @@ describe('test the initial setup on index file', () => {
 		calc.placeRobotAtCoords(0,0);
 		const result = cliAskQuestion(true);
 		if(result !== undefined){
-			expect (result.robot?.x).toBe(9);
-			expect (result.robot?.y).toBe(9);
+			expect (result.robot?.x).toBe(0);
+			expect (result.robot?.y).toBe(0);
 
 		} else{
 			fail('Expected result to be an object, but received undefined.');
